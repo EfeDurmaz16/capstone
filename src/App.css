@@ -1,4 +1,8 @@
 /* Global Styles */
+/*import Markazi Text*/
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
+/*import Karla*/
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
 :root {
   --primary-color: #495e57;
   --secondary-color: #ee9972;
@@ -7,7 +11,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Karla", serif;
   margin: 0;
   padding: 0;
   background: repeating-linear-gradient(90deg, #fff7f5, #fff7f5 20px, #fff 20px, #fff 40px);
@@ -170,7 +174,8 @@ body {
   padding: 0;
   font-size: 1rem;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
+  margin-right: 15px;
 }
 
 /* Testimonials Section Styles */
