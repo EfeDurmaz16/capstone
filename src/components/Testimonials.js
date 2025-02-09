@@ -1,6 +1,5 @@
 export const Testimonials = () => {
     const testimonials = [1, 2, 3, 4]
-  
     return (
       <section className="testimonials">
         <h2>Testimonials</h2>

@@ -11,7 +11,7 @@ const Hero = () => {
         <button className="cta-button">Reserve a Table</button>
       </div>
       <div className="hero-image">
-        <img src="./icons_assets/restaurant.jpg" width={"375px"}  alt="Restaurant hero" />
+        <img src="./icons_assets/restauranfood.jpg" width={"375px"}  alt="Restaurant hero" />
       </div>
       </section>
     )
