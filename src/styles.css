@@ -15,13 +15,7 @@ body {
   font-family: "Arial", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background: repeating-linear-gradient(
-      90deg,
-      #fff7f7,
-      #fff7f7 20px,
-      #fff 20px,
-      #fff 40px
-  );
+  
 }
 
 /* Navigation */

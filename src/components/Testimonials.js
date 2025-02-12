@@ -9,12 +9,13 @@ export const Testimonials = () => {
               <div className="rating">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="star">
-                    ★
+                    <img src= "./icons_assets/star?" width={"35px"} />
                   </span>
                 ))}
+              
               </div>
               <div className="reviewer">
-                <img src="/placeholder.svg?height=64&width=64" alt={`Reviewer ${item}`} />
+                <img src={`/icons_assets/review${item}`} alt={`Reviewer ${item}`} />
                 <div>
                   <h4>Review {item}</h4>
                   <p>Chicago, IL</p>
