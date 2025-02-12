@@ -27,7 +27,7 @@ const Specials = () => {
       return (
         <section className="specials">
           <div className="specials-header">
-            <h2>Specials</h2>
+            <h1>This weeks specials!</h1>
             <button className="online-menu-button">Online Menu</button>
           </div>
           <div className="specials-grid">

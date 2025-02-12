@@ -106,12 +106,15 @@ body {
 }
 
 .cta-button {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color-2);
   color: var(--text-color);
+  font-family: var(--secondary-font);
+  font-weight: bolder;
+  font-size: 18pt;
   max-width: 300px;
   border: none;
+  border-radius: 15px;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -138,12 +141,22 @@ body {
   margin-bottom: 2rem;
 }
 
+.specials-header h1 {
+  margin: 0;
+  font-family: var(--primary-font);
+  font-size: 40pt;
+  font-weight: normal;
+}
+
 .online-menu-button {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--primary-color-2 );
+  color: black;
+  font-family: var(--secondary-font);
+  font-weight: bolder;
   border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+  padding: .75rem 1.75rem;
+  font-size: 18pt;
+  border-radius: 10px 10px;
   cursor: pointer;
 }
 
@@ -173,6 +186,10 @@ body {
 
 .special-title {
   display: flex;
+  font-family: var(--secondary-font);
+  font-size: 16pt;
+  font-weight: bolder;
+
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;

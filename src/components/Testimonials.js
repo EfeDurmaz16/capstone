@@ -1,5 +1,6 @@
 export const Testimonials = () => {
     const testimonials = [1, 2, 3, 4]
+    const rating = Math.floor(Math.random() * 5) + 1;
     return (
       <section className="testimonials">
         <h2>Testimonials</h2>
@@ -7,7 +8,8 @@ export const Testimonials = () => {
           {testimonials.map((item) => (
             <div key={item} className="testimonial-card">
               <div className="rating">
-                {[...Array(5)].map((_, i) => (
+                
+                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="star">
                     <img src= "./icons_assets/star?" width={"35px"} />
                   </span>

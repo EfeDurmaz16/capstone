@@ -11,7 +11,7 @@ const About = () => {
           </p>
         </div>
         <div className="about-image">
-          <img src="/placeholder.svg?height=400&width=500" alt="About us" />
+          <img src="/icons_assets/Mario and Adrian A.jpg" width={"500px"}  alt="About us" />
         </div>
       </section>
     )
