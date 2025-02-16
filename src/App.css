@@ -329,6 +329,30 @@ body {
 
 .options{
   border-bottom: dashed 2px #777;
+  user-select: none;
+}
+
+.options img{
+  display: none;
+  color: white;
+  transform: rotate(180deg);
+}
+
+.selected {
+  background-color: #495e57;
+  color: white;
+  background-repeat: no-repeat;
+}
+
+.selected img{
+  display: block;
+  position: absolute;
+  filter: invert(100%);
+  right: 26px;
+  top: 16px;
+  width: 48px;
+  height: 48px;
+  transform: rotate(180deg);
 }
 
 #cheers{
