@@ -1,4 +1,8 @@
 import React from 'react';
+import Occasion from './Occasion';
+import { useState } from 'react';
+
+
 
 const BookingForm = ({
   resDate,
@@ -7,13 +11,14 @@ const BookingForm = ({
   setResTime,
   guests,
   setGuests,
-  occasion,
-  setOccasion,
   availableTimes,
-  handleSubmit
+  handleSubmit,
 }) => {
+  const [occasion, setOccasion] = useState(false);
   return (
+    
     <>
+    
       <form onSubmit={handleSubmit} style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
         <label htmlFor="res-date">Choose date</label>
         <input
@@ -47,16 +52,7 @@ const BookingForm = ({
           onChange={(e) => setGuests(Number(e.target.value))}
         />
 
-        {/* <label htmlFor="occasion">Occasion</label>
-        <select
-          id="occasion"
-          value={occasion}
-          onChange={(e) => setOccasion(e.target.value)}
-        >
-          <option value="">Select Occasion</option>
-          <option value="Birthday">Birthday</option>
-          <option value="Anniversary">Anniversary</option>
-        </select> */}
+        <Occasion occasion={occasion} setOccasion={setOccasion} />
 
         <input type="submit" value="Make Your reservation" />
       </form>

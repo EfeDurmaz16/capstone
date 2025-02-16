@@ -8,6 +8,7 @@ export default function Occasion() {
 
   const handleToggle = (e) => {
     e.stopPropagation();
+    
     if (selectedOption) {
       setSelectedOption(null);
       setShowDropdown(false);
@@ -22,7 +23,10 @@ export default function Occasion() {
     if (selectedOption === option) {
       setSelectedOption(null);
       setShowDropdown(true);
+      e.target.parentElement.style = "margin-top: 20px";
+
     } else {
+      e.target.parentElement.style = "margin-top: 0px";
       setSelectedOption(option);
       setShowDropdown(false);
     }
