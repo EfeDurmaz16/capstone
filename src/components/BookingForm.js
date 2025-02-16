@@ -47,7 +47,7 @@ const BookingForm = ({
           onChange={(e) => setGuests(Number(e.target.value))}
         />
 
-        <label htmlFor="occasion">Occasion</label>
+        {/* <label htmlFor="occasion">Occasion</label>
         <select
           id="occasion"
           value={occasion}
@@ -56,7 +56,7 @@ const BookingForm = ({
           <option value="">Select Occasion</option>
           <option value="Birthday">Birthday</option>
           <option value="Anniversary">Anniversary</option>
-        </select>
+        </select> */}
 
         <input type="submit" value="Make Your reservation" />
       </form>

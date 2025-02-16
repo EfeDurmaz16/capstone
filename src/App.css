@@ -305,6 +305,45 @@ body {
   color: var(--text-color);
 }
 
+#occasion, .options{
+  width: 400px;
+  height: 80px;
+  font-size: 20pt;
+  line-height: 80px;
+  background-color: #edefee;
+  font-family: var(--secondary-font);
+  text-align: center;
+  color: black;
+  font-weight: bolder;
+  position: relative;
+}
+
+#occasion{
+  border-radius: 8px;
+  animation-delay: 3000ms;
+}
+
+.options-dropdown{
+  margin-top: 20px;
+}
+
+.options{
+  border-bottom: dashed 2px #777;
+}
+
+#cheers{
+  position: absolute;
+  left: 26px;
+  top: 16px;
+}
+
+#chevron{
+  position: absolute;
+  right: 26px;
+  top: 16px;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero,
@@ -321,5 +360,7 @@ body {
   .nav li {
     margin-bottom: 0.5rem;
   }
+
+  
 }
 
