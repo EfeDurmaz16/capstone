@@ -18,6 +18,8 @@ const BookingPage = ({ availableTimes, dispatch }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // ...handle form submission using state...
+    
+
   };
 
   return (
@@ -33,6 +35,7 @@ const BookingPage = ({ availableTimes, dispatch }) => {
         setOccasion={setOccasion}
         availableTimes={availableTimes}
         handleSubmit={handleSubmit}
+        dispatch={dispatch}
       />
     </main>
   );
