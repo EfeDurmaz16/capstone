@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import BookingForm from './BookingForm';
 import { fetchAPI, submitAPI } from '../api';
 import { useNavigate } from 'react-router-dom';
@@ -21,9 +21,28 @@ const BookingPage = () => {
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
   const navigate = useNavigate();
 
+  // Retrieve existing bookings from local storage
+  const getBookingsFromLocalStorage = () => {
+    const bookings = localStorage.getItem('bookings');
+    return bookings ? JSON.parse(bookings) : [];
+  };
+
+  // Save bookings to local storage
+  const saveBookingsToLocalStorage = (bookings) => {
+    localStorage.setItem('bookings', JSON.stringify(bookings));
+  };
+
   const submitForm = (formData) => {
     if (submitAPI(formData)) {
+      // Retrieve existing bookings
+      const existingBookings = getBookingsFromLocalStorage();
+      // Add new booking
+      const updatedBookings = [...existingBookings, formData];
+      // Save updated bookings to local storage
+      saveBookingsToLocalStorage(updatedBookings);
+      // Navigate to confirmation page
       navigate('/confirmed');
+      console.log(updatedBookings)
     }
   };
 

@@ -5,8 +5,6 @@ import Specials from "./Specials"
 import Testimonials from "./Testimonials"
 import About from "./About"
 import Footer from "./Footer"
-import BookingPage  from "./BookingPage"
-import BookingForm from "./BookingForm"
 import { fetchAPI, submitAPI } from '../api'
 
 function initializeTimes() {
@@ -44,9 +42,6 @@ const Main = () => {
       <Testimonials />
       <About />
       <Footer />
-      {/* Pass state and dispatch down to BookingPage */}
-      {/* <BookingPage availableTimes={availableTimes} dispatch={dispatch} /> */}
-      {/* <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} /> */}
     </main>
   );
 }
