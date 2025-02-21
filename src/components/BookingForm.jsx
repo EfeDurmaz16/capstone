@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Occasion from './Occasion';
 
-const BookingForm = ({ availableTimes, dispatch }) => {
+const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
   const [resDate, setResDate] = useState("");
   const [resTime, setResTime] = useState(availableTimes[0] || "");
   const [guests, setGuests] = useState(1);
@@ -9,7 +9,8 @@ const BookingForm = ({ availableTimes, dispatch }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // ...submission logic...
+    submitForm({ resDate, resTime, guests, occasion });
+    console.log(occasion)
   };
 
   const handleDateChange = (e) => {
@@ -17,9 +18,10 @@ const BookingForm = ({ availableTimes, dispatch }) => {
     setResDate(newDate);
     // Only dispatch if dispatch is a function
     if (dispatch && typeof dispatch === 'function') {
-      dispatch({ type: 'update', times: availableTimes }); // Dispatch with type 'update' and available times
+      dispatch({ type: 'update', date: newDate });
     }
   };
+
 
   return (
     <>
@@ -57,8 +59,9 @@ const BookingForm = ({ availableTimes, dispatch }) => {
         />
 
         <Occasion occasion={occasion} setOccasion={setOccasion} />
-
-        <input type="button" value="Make Your reservation" />
+        <br></br>
+        
+        <button type="submit" value="Make Your reservation" onClick={handleSubmit} />
       </form>
     </>
   );
