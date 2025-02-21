@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Options } from "./Options";
 
-export default function Occasion() {
-  const [selectedOption, setSelectedOption] = useState(null);
+export default function Occasion({ selectedOption, setSelectedOption }) {
   const [showDropdown, setShowDropdown] = useState(false);
   const options = ["Birthday", "Engagement", "Anniversary"];
 
