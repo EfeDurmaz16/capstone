@@ -7,19 +7,25 @@ import Footer from "./Footer"
 import BookingPage  from "./BookingPage"
 
 // Reducer for available times
-const initialTimes = []  // or your default times array
-const availableTimesReducer = (state, action) => {
-  switch(action.type){
+const initialTimes = ["17:00", "18:00", "19:00", "20:00", "21:00"]; // Default times
+
+function initializeTimes() {
+  const today = new Date();
+  return window.fetchAPI(today);
+}
+
+function updateTimes(state, action) {
+  switch (action.type) {
     case 'update':
-      return action.times
+      return window.fetchAPI(new Date(action.date));
     default:
-      return state
+      return state;
   }
 }
 
 const Main = () => {
   // Lifted up availableTimes state using useReducer
-  const [availableTimes, dispatch] = useReducer(availableTimesReducer, initialTimes)
+  const [availableTimes, dispatch] = useReducer(updateTimes, initialTimes, initializeTimes);
 
   return (
     <main className="main">
@@ -31,7 +37,10 @@ const Main = () => {
       {/* Pass state and dispatch down to BookingPage */}
       <BookingPage availableTimes={availableTimes} dispatch={dispatch} />
     </main>
-  )
+  );
 }
 
-export default Main
+export default Main;
+
+// Export the functions for testing
+export { initializeTimes, updateTimes };

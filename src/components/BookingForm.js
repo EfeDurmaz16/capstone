@@ -17,7 +17,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
     setResDate(newDate);
     // Only dispatch if dispatch is a function
     if (dispatch && typeof dispatch === 'function') {
-      dispatch({ date: newDate });
+      dispatch({ type: 'update', times: availableTimes }); // Dispatch with type 'update' and available times
     }
   };
 

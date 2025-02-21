@@ -16,6 +16,7 @@ export default function Main() {
   return (
     <div>
       {/* <BookingForm availableTimes={availableTimes} dispatch={dispatch} /> */}
+      
     </div>
   );
 }
