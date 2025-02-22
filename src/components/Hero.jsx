@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
+
 const Hero = () => {
+    const navigate = useNavigate();
     return (
       <section className="hero">
       <div className="hero-content">
@@ -8,7 +12,7 @@ const Hero = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua
         </p>
-        <button className="cta-button">Reserve a Table</button>
+        <button className="cta-button" onClick={() => navigate("/reservations")}>Reserve a Table</button>
       </div>
       <div className="hero-image">
         <img src="./icons_assets/restauranfood.jpg" width={"375px"}  alt="Restaurant hero" />
